@@ -1,0 +1,148 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Calculator</title>
+    <style>
+        *{
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body{
+            width: 100%;
+            background: rgb(216,238,174);
+            background: linear-gradient(122deg, rgba(216,238,174,1) 0%, rgba(178,208,244,1) 100%);
+            background-repeat: no-repeat;
+            background-size: cover;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            
+        }
+
+        .area{
+            width: 50%;
+            height: 100vh;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            
+        }
+
+        form{
+            /* width: 70%; */
+            translate: 0px -120px;
+        }
+
+        input{
+            width: 100px; 
+            height: 40px; 
+            background-color: rgb(58, 201, 134); 
+            border-radius: 5px; 
+            font-weight: bold; 
+            font-size: 16px; 
+            border: none;
+            box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;
+            cursor: pointer;
+            margin: 5px;
+        }
+
+        input:hover{
+            background-color: rgb(112, 154, 245);
+        }
+
+        
+        .input-text{
+            width: 330px;
+            margin-bottom: 20px;
+            outline: none;
+            cursor:help;
+            padding: 5px;
+            background-color: white;
+        }
+
+    
+
+        #clear{
+            width: 215px;
+            background-color: rgb(112, 154, 245);
+        }
+        
+        #clear:hover{
+            background-color: salmon;
+        }
+
+        h1{
+            color: rgb(15, 15, 15);
+            text-align: center;
+        }
+        
+        #equal{
+            background-color: rgb(112, 154, 245);
+        }
+        
+        #equal:hover{
+            background-color: salmon;
+        }
+        
+
+        
+    </style>
+</head>
+<body>
+    <h1>My Calculator</h1>
+    <div class="area">
+        <form name="formm">
+            
+                <div class="textInput">
+                    <input class="input-text" type="text" name="enterV" id="textA"> 
+                </div>
+            
+            
+            <div class="button-area">
+                <input class="btn" type="button" value="CLEAR" onclick="formm.enterV.value = ' ' " id="clear">
+                <input class="btn" type="button" value="=" onclick="formm.enterV.value = eval(formm.enterV.value) "  id="equal">
+
+                <br><br>
+                <input class="btn" type="button" value="1" onclick="formm.enterV.value += '1' ">
+                <input class="btn" type="button" value="2" onclick="formm.enterV.value += '2' ">
+                <input class="btn" type="button" value="3" onclick="formm.enterV.value += '3' ">
+
+                <br> <br>
+                <input class="btn" type="button" value="4" onclick="formm.enterV.value += '4' ">
+                <input class="btn" type="button" value="5" onclick="formm.enterV.value += '5' ">
+                <input class="btn" type="button" value="6" onclick="formm.enterV.value += '6' ">
+
+                <br> <br>
+                <input class="btn" type="button" value="7" onclick="formm.enterV.value += '7' ">
+                <input class="btn" type="button" value="8" onclick="formm.enterV.value += '8' ">
+                <input class="btn" type="button" value="9" onclick="formm.enterV.value += '9' ">
+
+                <br> <br>
+                <input class="btn" type="button" value="." onclick="formm.enterV.value += '.' ">
+                <input class="btn" type="button" value="0" onclick="formm.enterV.value += '0' ">
+                <input class="btn" type="button" value="/" onclick="formm.enterV.value += '/' ">
+
+                <br> <br>
+                <input class="btn" type="button" value="+" onclick="formm.enterV.value += '+' ">
+                <input class="btn" type="button" value="-" onclick="formm.enterV.value += '-' ">
+                <input class="btn" type="button" value="*" onclick="formm.enterV.value += '*' ">
+
+                <br> <br>
+                
+                
+            </div>
+
+            
+            
+            
+        </form>
+    </div>
+    
+</body>
+</html>
